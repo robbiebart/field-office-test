@@ -67,55 +67,86 @@ function App() {
 				</nav>
 				<section className="main-grid instructions">
 					<div className="margin"></div>
-					<form onSubmit={handleSubmit}>
+					<form className="form" onSubmit={handleSubmit}>
 						<div>
-							<p>Contact</p>
+							<p className="form__title">Contact</p>
 							{step === 1 ? (
 								<div>
-									<h4>Great, can we get your name?</h4>
-									<input
-										placeholder="Name"
-										value={name}
-										onChange={(e) =>
-											setName(e.target.value)
-										}
-									/>
+									<h4 className="form__instructions">
+										Great, can we get your name? (No spam we
+										promise)
+									</h4>
+									<div className="form__wrapper">
+										<div className="form__wrapper__counter">
+											{step}/4
+										</div>
+										<input
+											className="form__wrapper__input"
+											placeholder="Name"
+											value={name}
+											onChange={(e) =>
+												setName(e.target.value)
+											}
+										/>
+									</div>
 								</div>
 							) : step === 2 ? (
 								<div>
-									<h4>We would also require your email</h4>
-									<input
-										placeholder="Email"
-										value={email}
-										onChange={(e) =>
-											setEmail(e.target.value)
-										}
-									/>
+									<h4 className="form__instructions">
+										We would also require your email
+									</h4>
+									<div className="form__wrapper">
+										<div className="form__wrapper__counter">
+											{step}/4
+										</div>
+										<input
+											className="form__wrapper__input"
+											placeholder="Email"
+											value={email}
+											onChange={(e) =>
+												setEmail(e.target.value)
+											}
+										/>
+									</div>
 								</div>
 							) : step === 3 ? (
 								<div>
-									<h4>and now your phone number</h4>
-									<input
-										placeholder="Phone"
-										value={phone}
-										onChange={(e) =>
-											setPhone(e.target.value)
-										}
-									/>
+									<h4 className="form__instructions">
+										and now your phone number
+									</h4>
+									<div className="form__wrapper">
+										<div className="form__wrapper__counter">
+											{step}/4
+										</div>
+										<input
+											className="form__wrapper__input"
+											placeholder="Phone"
+											value={phone}
+											onChange={(e) =>
+												setPhone(e.target.value)
+											}
+										/>
+									</div>
 								</div>
 							) : step === 4 ? (
 								<div>
-									<h4>
+									<h4 className="form__instructions">
 										And finally, what would you like to
 										discuss with us?
 									</h4>
-									<input
-										placeholder="message"
-										value={message}
-										onChange={(e) =>
-											setMessage(e.target.value)
-										}
-									/>
+									<div className="form__wrapper">
+										<div className="form__wrapper__counter">
+											{step}/4
+										</div>
+										<input
+											className="form__wrapper__input"
+											placeholder="message"
+											value={message}
+											onChange={(e) =>
+												setMessage(e.target.value)
+											}
+										/>
+									</div>
 								</div>
 							) : null}
 						</div>
