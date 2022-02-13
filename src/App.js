@@ -8,7 +8,7 @@ import {
 } from "./lib/util";
 
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 
 function App() {
 	const [step, setStep] = useState(1);
@@ -47,7 +47,7 @@ function App() {
 
 	return (
 		<div>
-			<header>the logo goes here</header>
+			<header className="header">the logo goes here</header>
 			<main>
 				<nav>
 					<button
@@ -63,13 +63,14 @@ function App() {
 						forward
 					</button>
 				</nav>
-				<section className="instructions">
+				<section className="main-grid instructions">
+					<div className="margin"></div>
 					<form onSubmit={handleSubmit}>
 						<div>
-							<h4>Contact</h4>
+							<p>Contact</p>
 							{step === 1 ? (
 								<div>
-									<p>Great, can we get your name?</p>
+									<h4>Great, can we get your name?</h4>
 									<input
 										placeholder="Name"
 										value={name}
@@ -80,7 +81,7 @@ function App() {
 								</div>
 							) : step === 2 ? (
 								<div>
-									<p>We would also require your email</p>
+									<h4>We would also require your email</h4>
 									<input
 										placeholder="Email"
 										value={email}
@@ -91,7 +92,7 @@ function App() {
 								</div>
 							) : step === 3 ? (
 								<div>
-									<p>and now your phone number</p>
+									<h4>and now your phone number</h4>
 									<input
 										placeholder="Phone"
 										value={phone}
@@ -102,10 +103,10 @@ function App() {
 								</div>
 							) : step === 4 ? (
 								<div>
-									<p>
+									<h4>
 										And finally, what would you like to
 										discuss with us?
-									</p>
+									</h4>
 									<input
 										placeholder="message"
 										value={message}
@@ -128,6 +129,7 @@ function App() {
 							</button>
 						)}
 					</form>
+					<div className="margin"></div>
 				</section>
 			</main>
 		</div>
