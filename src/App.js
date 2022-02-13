@@ -88,6 +88,9 @@ function App() {
 												setName(e.target.value)
 											}
 										/>
+										<div className="form__wrapper__error-field">
+											<p></p>
+										</div>
 									</div>
 								</div>
 							) : step === 2 ? (

@@ -70,17 +70,26 @@ nav {
 			height: 4.2rem;
 			padding: 1rem 2rem;
 			border-radius: 5rem;
+			color: #999999;
 
 			font-family: "NHaasGroteskDSW01-55Rg";
 			font-size: 1.6rem;
 			line-height: 2.2rem;
+		}
+
+		&__error-field {
+			height: 2.2rem;
+			p {
+				font-family: "NHaasGroteskDSW01-55Rg";
+				color: #ff0000;
+			}
 		}
 	}
 
 	.submit {
 		display: block;
 		width: 7.2rem;
-		margin: 5.7rem auto 0;
+		margin: 3.5rem auto 0;
 		padding: 0.8rem 2rem;
 		border-radius: 5rem;
 		border: #272727;
@@ -90,7 +99,7 @@ nav {
 		line-height: 2.2rem;
 
 		@media only screen and (min-width: 600px) {
-			margin-top: 10.6rem;
+			margin-top: 7rem;
 		}
 
 		&:active {
