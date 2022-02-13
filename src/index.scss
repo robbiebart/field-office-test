@@ -1,4 +1,5 @@
 @import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 
 /*
   1. Use a more-intuitive box-sizing model.
@@ -97,16 +98,42 @@ h6 {
 	}
 }
 
-/* font sizes*/
+/* fonts */
+
+@font-face {
+	font-family: "NHaasGroteskDSW01-55Rg";
+	src: url("//db.onlinewebfonts.com/t/78f487d8969694133745d5b7081895a6.eot");
+	src: url("//db.onlinewebfonts.com/t/78f487d8969694133745d5b7081895a6.eot?#iefix")
+			format("embedded-opentype"),
+		url("//db.onlinewebfonts.com/t/78f487d8969694133745d5b7081895a6.woff2")
+			format("woff2"),
+		url("//db.onlinewebfonts.com/t/78f487d8969694133745d5b7081895a6.woff")
+			format("woff"),
+		url("//db.onlinewebfonts.com/t/78f487d8969694133745d5b7081895a6.ttf")
+			format("truetype"),
+		url("//db.onlinewebfonts.com/t/78f487d8969694133745d5b7081895a6.svg#NHaasGroteskDSW01-55Rg")
+			format("svg");
+
+	font-family: "IBM Plex Mono", monospace;
+}
 
 h4 {
 	font-weight: 400;
 	font-size: 2.7rem;
 	line-height: 3.24rem;
 	color: #ffffff;
+
+	font-family: "NHaasGroteskDSW01-55Rg";
+	font-size: 27px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 32px;
+	letter-spacing: 0em;
+	text-align: left;
 }
 
 p {
+	font-family: "IBM Plex Mono";
 	font-size: 1.2rem;
 	line-height: 2rem;
 	color: #ffffff;
