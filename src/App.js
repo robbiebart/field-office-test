@@ -154,6 +154,7 @@ function App() {
 							<div>Inquiry sent, Thank You </div>
 						) : (
 							<button
+								className="submit"
 								type={step === 4 ? "submit" : "button"}
 								disabled={!validateInput()}
 								onClick={() => nextButton()}

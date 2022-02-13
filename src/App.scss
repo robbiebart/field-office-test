@@ -39,7 +39,7 @@ nav {
 	}
 
 	&__instructions {
-		min-height: 6.4rem;
+		min-height: 9.6rem;
 		max-width: 45.2rem;
 	}
 
@@ -68,12 +68,33 @@ nav {
 		&__input {
 			width: 100%;
 			height: 4.2rem;
-			padding: 1rem 0 1rem 2rem;
+			padding: 1rem 2rem;
 			border-radius: 5rem;
 
 			font-family: "NHaasGroteskDSW01-55Rg";
 			font-size: 1.6rem;
 			line-height: 2.2rem;
+		}
+	}
+
+	.submit {
+		display: block;
+		width: 7.2rem;
+		margin: 5.7rem auto 0;
+		padding: 0.8rem 2rem;
+		border-radius: 5rem;
+		border: #272727;
+		font-family: "NHaasGroteskDSW01-55Rg";
+		color: #272727;
+		font-size: 1.6rem;
+		line-height: 2.2rem;
+
+		@media only screen and (min-width: 600px) {
+			margin-top: 10.6rem;
+		}
+
+		&:active {
+			border: 0.1rem solid #00ff57;
 		}
 	}
 }
