@@ -77,16 +77,24 @@ h6 {
 
 .main-grid {
 	display: grid;
-	grid-template-columns: 2.4rem auto 2.4rem;
+	grid-template-columns: 1.5rem auto 1.5rem;
 	overflow-x: hidden;
+}
+
+@media only screen and (min-width: 600px) {
+	.main-grid {
+		grid-template-columns:
+			minmax(1.5rem, auto)
+			minmax(32.6rem, auto)
+			minmax(1.5rem, auto);
+	}
 }
 
 @media only screen and (min-width: 944px) {
 	.main-grid {
-		grid-template-columns: minmax(4rem, auto) minmax(auto, 944px) minmax(
-				4rem,
-				auto
-			);
+		grid-template-columns:
+			22.4% minmax(32.6rem, auto)
+			22.4%;
 	}
 }
 
