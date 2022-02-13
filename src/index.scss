@@ -78,7 +78,6 @@ h6 {
 .main-grid {
 	display: grid;
 	grid-template-columns: 1.5rem auto 1.5rem;
-	overflow-x: hidden;
 }
 
 @media only screen and (min-width: 600px) {
@@ -104,9 +103,11 @@ h4 {
 	font-weight: 400;
 	font-size: 2.7rem;
 	line-height: 3.24rem;
+	color: #ffffff;
 }
 
 p {
 	font-size: 1.2rem;
 	line-height: 2rem;
+	color: #ffffff;
 }

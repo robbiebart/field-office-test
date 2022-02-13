@@ -47,7 +47,9 @@ function App() {
 
 	return (
 		<div>
-			<header className="header">the logo goes here</header>
+			<header className="header">
+				<img src="/assets/PrimaryLogo.png" />
+			</header>
 			<main>
 				<nav>
 					<button
