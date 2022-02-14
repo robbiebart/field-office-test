@@ -179,5 +179,10 @@ body {
 		&.valid {
 			border: 0.1rem solid #00ff57;
 		}
+
+		&.success {
+			background-color: #ffffff;
+			border: 0.1rem solid #00ff57;
+		}
 	}
 }

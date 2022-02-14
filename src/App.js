@@ -193,20 +193,22 @@ function App() {
 								</div>
 							) : null}
 						</div>
-						{step === 5 ? (
-							<div>Inquiry sent, Thank You </div>
-						) : (
-							<button
-								className={`submit ${
-									validateInput() ? "valid" : ""
-								}`}
-								type={step === 4 ? "submit" : "button"}
-								disabled={!validateInput()}
-								onClick={() => nextButton()}
-							>
-								{step === 4 ? "Submit" : "Next"}
-							</button>
-						)}
+						(
+						<button
+							className={`submit${
+								validateInput() ? " valid" : ""
+							} ${step === 5 ? " success" : ""}`}
+							type={step === 4 ? "submit" : "button"}
+							disabled={!validateInput()}
+							onClick={() => nextButton()}
+						>
+							{step === 4
+								? "Submit"
+								: step === 5
+								? "Inquiry Sent, Thank you"
+								: "Next"}
+						</button>
+						)
 					</form>
 					<div className="margin">
 						<button
