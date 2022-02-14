@@ -19,7 +19,16 @@ function App() {
 
 	function handleSubmit(e) {
 		e.preventDefault();
-		console.log(name, email, phone, message);
+		console.log(
+			"name:",
+			name,
+			"email:",
+			email,
+			"phone",
+			phone,
+			"message:",
+			message
+		);
 		setEmail("");
 		setName("");
 		setPhone("");
