@@ -54,7 +54,7 @@ function App() {
 			<header className="header">
 				<img
 					src="/assets/PrimaryLogo.png"
-					alt="background image of a geometric mountain shape"
+					alt="a geometric mountain shape"
 				/>
 			</header>
 			<main>
