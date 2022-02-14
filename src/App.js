@@ -223,7 +223,6 @@ function App() {
 								</div>
 							) : null}
 						</div>
-						(
 						<button
 							className={`submit${
 								validateInput() ? " valid" : ""
@@ -238,7 +237,6 @@ function App() {
 								? "Inquiry Sent, Thank you"
 								: "Next"}
 						</button>
-						)
 					</form>
 					<div className="margin">
 						{step === 4 || step === 5 ? null : (
