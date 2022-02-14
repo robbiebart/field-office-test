@@ -95,6 +95,7 @@ body {
 	&__title {
 		margin-bottom: 1rem;
 		text-transform: uppercase;
+		letter-spacing: 0.1rem;
 	}
 
 	&__instructions {
@@ -134,13 +135,16 @@ body {
 			padding: 1rem 2rem;
 			border-radius: 5rem;
 			color: #999999;
+			border: 0;
+			outline: none;
 
 			font-family: "NHaasGroteskDSW01-55Rg";
 			font-size: 1.6rem;
 			line-height: 2.2rem;
 
-			&::focus-visible {
-				border: none;
+			&::focus-visible,
+			&:focus {
+				outline: none;
 			}
 
 			&.error {
