@@ -67,7 +67,6 @@ body {
 
 		img {
 			border: 0;
-
 			padding: 0;
 
 			@media only screen and (min-width: 600px) {
@@ -120,7 +119,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin: 8.1rem auto 0;
+		margin: 5.9rem auto 0;
 
 		width: 29rem;
 
@@ -141,9 +140,6 @@ body {
 			flex-direction: row;
 			justify-content: space-between;
 
-			.placeholder {
-			}
-
 			.counter {
 				align-self: flex-end;
 			}
@@ -156,15 +152,9 @@ body {
 			color: #999999;
 			border: 0;
 			outline: none;
-
 			font-family: "NHaasGroteskDSW01-55Rg";
 			font-size: 1.6rem;
 			line-height: 2.2rem;
-
-			&::focus-visible,
-			&:focus {
-				outline: none;
-			}
 
 			&.error {
 				border: solid 1px #ff0000;
