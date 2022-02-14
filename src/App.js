@@ -19,21 +19,23 @@ function App() {
 
 	function handleSubmit(e) {
 		e.preventDefault();
-		console.log(
-			"name:",
-			name,
-			"email:",
-			email,
-			"phone",
-			phone,
-			"message:",
-			message
-		);
-		setEmail("");
-		setName("");
-		setPhone("");
-		setMessage("");
-		setStep(5);
+		if (step === 4) {
+			console.log(
+				"name:",
+				name,
+				"email:",
+				email,
+				"phone",
+				phone,
+				"message:",
+				message
+			);
+			setEmail("");
+			setName("");
+			setPhone("");
+			setMessage("");
+			setStep(5);
+		}
 	}
 
 	function validateInput() {
