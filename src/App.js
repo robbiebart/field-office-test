@@ -94,14 +94,19 @@ function App() {
 										promise)
 									</h4>
 									<div className="form__wrapper">
-										<div className="form__wrapper__counter">
-											{step}/4
+										<div className="form__wrapper__info">
+											<div className="placeholder">
+												{name ? "Full name*" : ""}
+											</div>
+											<div className="counter">
+												{step}/4
+											</div>
 										</div>
 										<input
 											className={`form__wrapper__input ${
 												error ? "error" : ""
 											}`}
-											placeholder="Name"
+											placeholder="Full name*"
 											value={name}
 											onChange={(e) =>
 												setName(e.target.value)
@@ -122,14 +127,19 @@ function App() {
 										We would also require your email
 									</h4>
 									<div className="form__wrapper">
-										<div className="form__wrapper__counter">
-											{step}/4
+										<div className="form__wrapper__info">
+											<div className="placeholder">
+												{email ? "Email*" : ""}
+											</div>
+											<div className="counter">
+												{step}/4
+											</div>
 										</div>
 										<input
 											className={`form__wrapper__input ${
 												error ? "error" : ""
 											}`}
-											placeholder="Email"
+											placeholder="Email*"
 											value={email}
 											onChange={(e) =>
 												setEmail(e.target.value)
@@ -150,14 +160,19 @@ function App() {
 										and now your phone number
 									</h4>
 									<div className="form__wrapper">
-										<div className="form__wrapper__counter">
-											{step}/4
+										<div className="form__wrapper__info">
+											<div className="placeholder">
+												{phone ? "Phone*" : ""}
+											</div>
+											<div className="counter">
+												{step}/4
+											</div>
 										</div>
 										<input
 											className={`form__wrapper__input ${
 												error ? "error" : ""
 											}`}
-											placeholder="Phone"
+											placeholder="Phone*"
 											value={phone}
 											onChange={(e) =>
 												setPhone(e.target.value)
@@ -179,8 +194,13 @@ function App() {
 										discuss with us?
 									</h4>
 									<div className="form__wrapper">
-										<div className="form__wrapper__counter">
-											{Math.min(step, 4)}/4
+										<div className="form__wrapper__info">
+											<div className="placeholder">
+												{message ? "Message*" : ""}
+											</div>
+											<div className="counter">
+												{Math.min(step, 4)}/4
+											</div>
 										</div>
 										<input
 											className={`form__wrapper__input ${
