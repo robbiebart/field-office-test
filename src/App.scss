@@ -27,6 +27,11 @@ body {
 			width: 6.8rem;
 			height: 6.4rem;
 			top: 32.22rem;
+			left: 4rem;
+		}
+
+		@media only screen and (min-width: 800px) {
+			top: 32.22rem;
 			left: 12rem;
 		}
 
@@ -53,6 +58,11 @@ body {
 		@media only screen and (min-width: 600px) {
 			width: 6.8rem;
 			height: 6.4rem;
+			top: 32.22rem;
+			right: 4.9rem;
+		}
+
+		@media only screen and (min-width: 800px) {
 			top: 32.22rem;
 			right: 12.9rem;
 		}

@@ -210,20 +210,22 @@ function App() {
 						)
 					</form>
 					<div className="margin">
-						<button
-							className="margin__arrow-right"
-							onClick={() =>
-								validateInput()
-									? setStep(step + 1)
-									: setError(true)
-							}
-							disabled={step >= 4}
-						>
-							<img
-								src="/assets/ArrowRight.png"
-								alt="right arrow button for navigation"
-							/>
-						</button>
+						{step === 4 || step === 5 ? null : (
+							<button
+								className="margin__arrow-right"
+								onClick={() =>
+									validateInput()
+										? setStep(step + 1)
+										: setError(true)
+								}
+								disabled={step >= 4}
+							>
+								<img
+									src="/assets/ArrowRight.png"
+									alt="right arrow button for navigation"
+								/>
+							</button>
+						)}
 					</div>
 				</section>
 			</main>
