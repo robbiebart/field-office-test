@@ -7,7 +7,6 @@ import {
 	validateMessage,
 } from "./lib/util";
 
-import logo from "./logo.svg";
 import "./App.scss";
 
 function App() {
@@ -53,7 +52,10 @@ function App() {
 	return (
 		<div>
 			<header className="header">
-				<img src="/assets/PrimaryLogo.png" />
+				<img
+					src="/assets/PrimaryLogo.png"
+					alt="background image of a geometric mountain shape"
+				/>
 			</header>
 			<main>
 				<nav></nav>
@@ -65,7 +67,10 @@ function App() {
 								onClick={() => setStep(step - 1)}
 								disabled={step <= 1}
 							>
-								<img src="/assets/ArrowLeft.png" />
+								<img
+									src="/assets/ArrowLeft.png"
+									alt="left arrow button for navigation"
+								/>
 							</button>
 						)}
 					</div>
@@ -213,7 +218,10 @@ function App() {
 							}
 							disabled={step >= 4}
 						>
-							<img src="/assets/ArrowRight.png" />
+							<img
+								src="/assets/ArrowRight.png"
+								alt="right arrow button for navigation"
+							/>
 						</button>
 					</div>
 				</section>
