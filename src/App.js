@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
 	validateName,
@@ -16,6 +16,7 @@ function App() {
 	const [email, setEmail] = useState("");
 	const [phone, setPhone] = useState("");
 	const [message, setMessage] = useState("");
+	const [error, setError] = useState(false);
 
 	function handleSubmit(e) {
 		e.preventDefault();
@@ -45,28 +46,29 @@ function App() {
 		}
 	}
 
+	useEffect(() => {
+		setError(false);
+	}, [step]);
+
 	return (
 		<div>
 			<header className="header">
 				<img src="/assets/PrimaryLogo.png" />
 			</header>
 			<main>
-				<nav>
-					<button
-						onClick={() => setStep(step - 1)}
-						disabled={step <= 1}
-					>
-						backward
-					</button>
-					<button
-						onClick={() => setStep(step + 1)}
-						disabled={step >= 4}
-					>
-						forward
-					</button>
-				</nav>
+				<nav></nav>
 				<section className="main-grid instructions">
-					<div className="margin"></div>
+					<div className="margin">
+						{step === 1 ? null : (
+							<button
+								className="margin__arrow-left"
+								onClick={() => setStep(step - 1)}
+								disabled={step <= 1}
+							>
+								<img src="/assets/ArrowLeft.png" />
+							</button>
+						)}
+					</div>
 					<form className="form" onSubmit={handleSubmit}>
 						<div>
 							<p className="form__title">Contact</p>
@@ -81,7 +83,9 @@ function App() {
 											{step}/4
 										</div>
 										<input
-											className="form__wrapper__input"
+											className={`form__wrapper__input ${
+												error ? "error" : ""
+											}`}
 											placeholder="Name"
 											value={name}
 											onChange={(e) =>
@@ -89,7 +93,11 @@ function App() {
 											}
 										/>
 										<div className="form__wrapper__error-field">
-											<p></p>
+											<p>
+												{error
+													? "This field cannot be empty"
+													: null}
+											</p>
 										</div>
 									</div>
 								</div>
@@ -103,13 +111,22 @@ function App() {
 											{step}/4
 										</div>
 										<input
-											className="form__wrapper__input"
+											className={`form__wrapper__input ${
+												error ? "error" : ""
+											}`}
 											placeholder="Email"
 											value={email}
 											onChange={(e) =>
 												setEmail(e.target.value)
 											}
 										/>
+										<div className="form__wrapper__error-field">
+											<p>
+												{error
+													? "Invalid email format"
+													: null}
+											</p>
+										</div>
 									</div>
 								</div>
 							) : step === 3 ? (
@@ -122,16 +139,25 @@ function App() {
 											{step}/4
 										</div>
 										<input
-											className="form__wrapper__input"
+											className={`form__wrapper__input ${
+												error ? "error" : ""
+											}`}
 											placeholder="Phone"
 											value={phone}
 											onChange={(e) =>
 												setPhone(e.target.value)
 											}
 										/>
+										<div className="form__wrapper__error-field">
+											<p>
+												{error
+													? "This field cannot be empty"
+													: null}
+											</p>
+										</div>
 									</div>
 								</div>
-							) : step === 4 ? (
+							) : step === 4 || step === 5 ? (
 								<div>
 									<h4 className="form__instructions">
 										And finally, what would you like to
@@ -139,16 +165,25 @@ function App() {
 									</h4>
 									<div className="form__wrapper">
 										<div className="form__wrapper__counter">
-											{step}/4
+											{Math.min(step, 4)}/4
 										</div>
 										<input
-											className="form__wrapper__input"
+											className={`form__wrapper__input ${
+												error ? "error" : ""
+											}`}
 											placeholder="message"
 											value={message}
 											onChange={(e) =>
 												setMessage(e.target.value)
 											}
 										/>
+										<div className="form__wrapper__error-field">
+											<p>
+												{error
+													? "This field cannot be empty"
+													: null}
+											</p>
+										</div>
 									</div>
 								</div>
 							) : null}
@@ -157,7 +192,9 @@ function App() {
 							<div>Inquiry sent, Thank You </div>
 						) : (
 							<button
-								className="submit"
+								className={`submit ${
+									validateInput() ? "valid" : ""
+								}`}
 								type={step === 4 ? "submit" : "button"}
 								disabled={!validateInput()}
 								onClick={() => nextButton()}
@@ -166,7 +203,19 @@ function App() {
 							</button>
 						)}
 					</form>
-					<div className="margin"></div>
+					<div className="margin">
+						<button
+							className="margin__arrow-right"
+							onClick={() =>
+								validateInput()
+									? setStep(step + 1)
+									: setError(true)
+							}
+							disabled={step >= 4}
+						>
+							<img src="/assets/ArrowRight.png" />
+						</button>
+					</div>
 				</section>
 			</main>
 		</div>

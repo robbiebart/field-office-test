@@ -8,8 +8,66 @@ body {
 	}
 }
 
-nav {
-	display: none;
+.margin {
+	position: relative;
+
+	&__arrow-left {
+		position: absolute;
+		// display: none;
+		width: 4.6rem;
+		height: 4.5rem;
+
+		top: 35.6rem;
+		left: 0.9rem;
+		padding: 0;
+		border: 0;
+		background: transparent;
+
+		@media only screen and (min-width: 600px) {
+			width: 6.8rem;
+			height: 6.4rem;
+			top: 32.22rem;
+			left: 12rem;
+		}
+
+		img {
+			padding: 0;
+
+			@media only screen and (min-width: 600px) {
+				width: 6.4rem;
+				height: 6.4rem;
+			}
+		}
+	}
+	&__arrow-right {
+		position: absolute;
+		// display: none;
+		width: 4.6rem;
+		height: 4.5rem;
+		padding: 0;
+		top: 35.6rem;
+		right: 0.9rem;
+		background: transparent;
+		border: 0;
+
+		@media only screen and (min-width: 600px) {
+			width: 6.8rem;
+			height: 6.4rem;
+			top: 32.22rem;
+			right: 12.9rem;
+		}
+
+		img {
+			border: 0;
+
+			padding: 0;
+
+			@media only screen and (min-width: 600px) {
+				width: 6.4rem;
+				height: 6.4rem;
+			}
+		}
+	}
 }
 
 .header {
@@ -36,11 +94,16 @@ nav {
 
 	&__title {
 		margin-bottom: 1rem;
+		text-transform: uppercase;
 	}
 
 	&__instructions {
 		min-height: 9.6rem;
 		max-width: 45.2rem;
+
+		@media only screen and (min-width: 600px) {
+			min-height: 6.4rem;
+		}
 	}
 
 	&__wrapper {
@@ -56,7 +119,7 @@ nav {
 		}
 
 		@media only screen and (min-width: 600px) {
-			margin-top: 10rem;
+			margin-top: 7.8rem;
 		}
 
 		&__counter {
@@ -75,6 +138,14 @@ nav {
 			font-family: "NHaasGroteskDSW01-55Rg";
 			font-size: 1.6rem;
 			line-height: 2.2rem;
+
+			&::focus-visible {
+				border: none;
+			}
+
+			&.error {
+				border: solid 1px #ff0000;
+			}
 		}
 
 		&__error-field {
@@ -88,7 +159,6 @@ nav {
 
 	.submit {
 		display: block;
-		width: 7.2rem;
 		margin: 3.5rem auto 0;
 		padding: 0.8rem 2rem;
 		border-radius: 5rem;
@@ -102,7 +172,7 @@ nav {
 			margin-top: 7rem;
 		}
 
-		&:active {
+		&.valid {
 			border: 0.1rem solid #00ff57;
 		}
 	}
