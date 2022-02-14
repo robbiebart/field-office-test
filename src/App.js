@@ -58,7 +58,6 @@ function App() {
 				/>
 			</header>
 			<main>
-				<nav></nav>
 				<section className="main-grid instructions">
 					<div className="margin">
 						{step === 1 ? null : (
